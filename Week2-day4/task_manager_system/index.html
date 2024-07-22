@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Task Manager system</title>
+</head>
+
+<body>
+    <h1>Task Manager</h1>
+
+    <h2>Create Task</h2>
+    <form action="create.php" method="post">
+        <label>Task Name: <input type="text" name="task_name"></label><br>
+        <label>Description: <textarea name="task_description"></textarea></label><br>
+        <input type="submit" value="Create Task">
+    </form>
+
+    <h2>Tasks</h2>
+    <?php include 'read.php'; ?>
+
+    <h2>Update Task</h2>
+    <form action="update.php" method="post">
+        <label>Task ID: <input type="text" name="task_id"></label><br>
+        <label>New Task Name: <input type="text" name="task_name"></label><br>
+        <label>New Description: <textarea name="task_description"></textarea></label><br>
+        <input type="submit" value="Update Task">
+    </form>
+
+    <h2>Delete Task</h2>
+    <form action="delete.php" method="post">
+        <label>Task ID: <input type="text" name="task_id"></label><br>
+        <input type="submit" value="Delete Task">
+    </form>
+</body>
+
+</html>
